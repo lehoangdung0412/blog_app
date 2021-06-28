@@ -1,6 +1,5 @@
-import express from "express";
-const app = express();
-const port = 3000;
+import app from "./server";
+const port = 3001;
 
 app.listen( port, () => {
   // tslint:disable-next-line:no-console
