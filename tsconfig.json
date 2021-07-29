@@ -1,20 +1,38 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "target": "es2017",
+        "lib": [
+            "es2018"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
         "esModuleInterop": true,
-        "target": "es6",
-        "noImplicitAny": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "commonjs",
         "moduleResolution": "node",
-        "sourceMap": true,
-        "outDir": "dist",
+        "resolveJsonModule": true,
+        "isolatedModules": false,
+        "noEmit": false,
         "baseUrl": ".",
-        "paths": {
-            "*": [
-                "node_modules/*"
-            ]
-        }
+        "outDir": "dist",
     },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/__tests__/**/*.ts",
+    ],
     "include": [
-        "src/**/*"
+        "src/**/*.ts",
+        "**/*.ts",
+        "**/*.d.ts"
+    ],
+    "ts-node": {
+        "files": true
+    },
+    "typeRoots": [
+        "./src/typing",
+        "./node_modules/@types"
     ]
 }
